@@ -48,6 +48,7 @@
       align-items: center;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
       z-index: 999;
+      transition: transform 0.3s ease;
       position: relative;
     }
     nav .logo {
@@ -365,7 +366,8 @@
   cursor: pointer;
   position: absolute;
   right: 20px;
-  top: 24px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 1000;
 }
 
@@ -603,6 +605,19 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   text-decoration: none;
 ">Book a Call</a>
+  <script>
+    let lastScrollY = window.scrollY;
+    const nav = document.querySelector("nav");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY < lastScrollY) {
+        nav.style.transform = "translateY(0)";
+      } else {
+        nav.style.transform = "translateY(-100%)";
+      }
+      lastScrollY = window.scrollY;
+    });
+  </script>
 </body>
 </html>
 <!-- PHASE 2 START -->
