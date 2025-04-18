@@ -48,6 +48,7 @@
       align-items: center;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
       z-index: 999;
+      position: relative;
     }
     nav .logo {
       font-size: 1.8rem;
@@ -362,6 +363,10 @@
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 24px;
+  z-index: 1000;
 }
 
 .hamburger span {
@@ -404,6 +409,20 @@
   }
 }
 
+  /* Animate hamburger into X icon when menu is open */
+  .menu-open .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+  }
+  .menu-open .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-open .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+  }
+  
+  .hamburger span {
+    transition: transform 0.3s, opacity 0.3s;
+  }
   </style>
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/petervurgy/assets/main/yazful-favicon.png" />
