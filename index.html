@@ -606,16 +606,24 @@
   text-decoration: none;
 ">Book a Call</a>
   <script>
-    let lastScrollY = window.scrollY;
     const nav = document.querySelector("nav");
-
+    let lastScrollY = window.scrollY;
+ 
     window.addEventListener("scroll", () => {
-      if (window.scrollY < lastScrollY) {
+      const currentScroll = window.scrollY;
+ 
+      if (currentScroll <= 0) {
+        nav.style.transform = "translateY(0)";
+        return;
+      }
+ 
+      if (currentScroll < lastScrollY) {
         nav.style.transform = "translateY(0)";
       } else {
         nav.style.transform = "translateY(-100%)";
       }
-      lastScrollY = window.scrollY;
+ 
+      lastScrollY = currentScroll;
     });
   </script>
 </body>
