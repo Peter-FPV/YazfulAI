@@ -4,82 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Yazful - Elite AI Automation Agency. Streamline your business with expert AI-driven systems that scale.">
-  <meta name="keywords" content="AI automation agency, chatbot services, automation for businesses, Yazful AI, automation strategy, AI scheduling systems">
-  <link rel="canonical" href="https://shopyazful.com/about.html">
-  <title>Yazful | Elite AI Automation Systems</title>
+  <meta name="keywords" content="AI automation agency, chatbot services, AI website automation, AI lead follow-up, AI assistant, calendar booking automation">
+  <title>Yazful | About</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* DARK MODE STYLES */
-    .dark body {
-      background-color: #121212;
-      color: #f5f5f5;
-    }
-    .dark nav,
-    .dark .feature-card,
-    .dark .why-box,
-    .dark footer,
-    .dark .quote,
-    .dark .testimonial-swiper .swiper-slide {
-      background-color: #1e1e1e;
-      color: #f5f5f5;
-    }
-    .dark nav ul li a {
-      color: #ddd;
-    }
-    .dark nav ul li a::after {
-      background: #66aaff;
-    }
-    .dark .hero {
-      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-                  url('https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=1400') center/cover no-repeat;
-    }
-    .dark .hero p {
-      color: #ccc;
-    }
-    .dark .section-subtitle {
-      color: #bbb;
-    }
-    .dark .sticky-cta {
-      background: #66aaff;
-      color: #000;
-    }
-    .dark .cta {
-      background: #121212;
-      color: #fff;
-    }
-    .dark .cta a {
-      background: #fff;
-      color: #0070f3;
-    }
-    .dark .footer-links a {
-      color: #ccc;
-    }
-
-    .logo-highlight {
-      color: #1e1e1e;
-    }
-    .dark .logo-highlight {
-      color: #ffffff;
-    }
-
-    /* Highlight the active nav link */
-    nav ul li a.active {
-      color: #0070f3;
-    }
-
-    /* Section fade-in animation styles */
-    .section {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease-in-out;
-    }
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
     /* RESET & BASE STYLES */
     *, *::before, *::after {
       box-sizing: border-box;
@@ -119,21 +49,20 @@
       align-items: center;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
       z-index: 999;
+      transition: transform 0.3s ease;
+      position: relative;
     }
     nav .logo {
       font-size: 1.8rem;
       font-weight: 700;
       color: #0070f3;
     }
-    /* Hamburger menu styles */
-    .hamburger {
-      display: none;
-      font-size: 1.5rem;
-      cursor: pointer;
+
+    .logo-highlight {
+      color: #1e1e1e;
     }
-    .nav-menu {
-      display: flex;
-      align-items: center;
+    .dark .logo-highlight {
+      color: #ffffff;
     }
     nav ul {
       display: flex;
@@ -190,9 +119,6 @@
       border-radius: 8px;
       font-weight: bold;
       transition: background 0.3s;
-      min-width: 200px;
-      text-align: center;
-      padding: 12px 20px;
     }
     .hero-buttons a.secondary {
       background: transparent;
@@ -200,6 +126,15 @@
     }
     .hero-buttons a:hover {
       background: #0056c7;
+    }
+
+    /* Bounce animation for sticky CTA */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    .sticky-cta:hover {
+      animation: bounce 0.5s infinite;
     }
 
     /* SECTION WRAPPER */
@@ -265,8 +200,6 @@
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
-      padding: 30px;
-      margin: 0 auto;
     }
     .feature-card h4 {
       margin-bottom: 10px;
@@ -354,132 +287,204 @@
         gap: 10px;
         padding: 20px;
       }
-      .hamburger {
-        display: block;
-      }
-      .nav-menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: #fff;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        padding: 20px;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      }
-      .nav-menu.open {
-        display: flex;
-      }
+
       nav ul {
         flex-direction: column;
         align-items: center;
         gap: 15px;
       }
+
       .hero h1 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
       }
+
       .hero p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
+
       .hero-buttons {
         flex-direction: column;
         gap: 15px;
       }
+
       section {
         padding: 60px 16px;
       }
+
       .section-title {
         font-size: 2rem;
       }
+
       .section-subtitle {
         font-size: 1rem;
       }
+
       .why-container, .feature-grid {
         grid-template-columns: 1fr;
       }
+
       .quote blockquote {
         font-size: 1.2rem;
       }
+
       .logos img {
         width: 60px;
       }
+
       footer {
         padding: 30px 16px;
       }
+
       .footer-links {
         flex-direction: column;
-        align-items: center;
         gap: 10px;
       }
-      .footer-links a {
-        display: block;
-        font-size: 0.95rem;
-        padding: 8px 0;
-      }
     }
 
-    /* Additional mobile responsiveness styles */
-    .feature-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
+  /* Additional mobile responsiveness styles */
+  .feature-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 
-    /* Swiper Testimonial Styles */
-    .swiper-wrapper {
-      display: flex;
-      transition-timing-function: ease-in-out;
-    }
-    .swiper-slide {
-      width: 100%;
-      max-width: 100%;
-      box-sizing: border-box;
-    }
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+  }
 
-    .hero-buttons a {
-      width: 100%;
-      text-align: center;
-      min-width: 200px;
-      padding: 12px 20px;
-    }
+  .feature-card,
+  .why-box {
+    padding: 20px;
+  }
 
-    .feature-card,
-    .why-box {
-      padding: 30px;
-      margin: 0 auto;
-    }
+  .why-container {
+    gap: 30px;
+  }
 
-    .why-container {
-      gap: 30px;
-    }
+  .logos {
+    gap: 20px;
+  }
 
-    .logos {
-      gap: 20px;
-    }
+  .feature-card h4,
+  .why-box h3 {
+    font-size: 1.2rem;
+  }
 
-    .feature-card h4,
-    .why-box h3 {
-      font-size: 1.2rem;
-    }
+  .feature-card p,
+  .why-box p {
+    font-size: 0.95rem;
+  }
 
-    .feature-card p,
-    .why-box p {
-      font-size: 0.95rem;
-    }
+  .hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
 
-    /* Anchor scroll offset for fixed nav */
-    :target::before {
-      content: "";
-      display: block;
-      height: 80px;
-      margin-top: -80px;
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: #0070f3;
+  border-radius: 2px;
+}
+
+/* Mobile Nav */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links-wrapper {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 998;
+  }
+
+  .menu-open .nav-links-wrapper {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  nav {
+    align-items: flex-start;
+  }
+}
+
+  /* Animate hamburger into X icon when menu is open */
+  .menu-open .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+  }
+  .menu-open .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-open .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+  }
+  
+  .hamburger span {
+    transition: transform 0.3s, opacity 0.3s;
+  }
+    /* DARK MODE BASE */
+    .dark body {
+      background-color: #121212;
+      color: #f5f5f5;
+    }
+    .dark nav,
+    .dark .feature-card,
+    .dark .why-box,
+    .dark footer,
+    .dark .quote,
+    .dark .testimonial-swiper .swiper-slide {
+      background-color: #1e1e1e;
+      color: #f5f5f5;
+    }
+    .dark nav ul li a {
+      color: #ddd;
+    }
+    .dark nav ul li a::after {
+      background: #66aaff;
+    }
+    .dark .hero {
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                  url('https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=1400') center/cover no-repeat;
+    }
+    .dark .hero p {
+      color: #ccc;
+    }
+    .dark .section-subtitle {
+      color: #bbb;
+    }
+    .dark .sticky-cta {
+      background: #66aaff;
+      color: #000;
+    }
+    .dark .cta {
+      background: #121212;
+      color: #fff;
+    }
+    .dark .cta a {
+      background: #fff;
+      color: #0070f3;
     }
   </style>
-  <script>
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (prefersDark) document.documentElement.classList.add('dark');
-  </script>
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/petervurgy/assets/main/yazful-favicon.png" />
   
@@ -497,7 +502,6 @@
   <meta name="twitter:image" content="https://raw.githubusercontent.com/petervurgy/assets/main/yazful-og.png" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -505,7 +509,7 @@
     "name": "Yazful",
     "url": "https://shopyazful.com",
     "logo": "https://raw.githubusercontent.com/petervurgy/assets/main/yazful-favicon.png",
-    "description": "Yazful is an elite AI automation agency helping service businesses streamline with custom systems.",
+    "description": "Elite AI automation agency specializing in chatbot systems, lead follow-up, smart calendars, and custom automations.",
     "sameAs": [
       "https://www.linkedin.com/company/yazful",
       "https://instagram.com/yazful",
@@ -514,252 +518,112 @@
   }
   </script>
 </head>
-<body>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script>
-  new Swiper('.testimonial-swiper', {
-    loop: true,
-    slidesPerView: 1,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    autoplay: {
-      delay: 5000,
-    },
-    spaceBetween: 40,
-  });
+  // Detect user's system preference and store in localStorage
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (prefersDark) document.documentElement.classList.add('dark');
 </script>
-  <nav>
-    <div class="logo">
-      <div style="font-size: 1.8rem; font-weight: 700; color: #0070f3;">Yazful <span class="logo-highlight">AI</span></div>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </div>
-    <div class="nav-menu">
-      <ul>
-        <li><a href="#about" class="active">Why Us</a></li>
-        <li><a href="index.html/#services">Services</a></li>
-        <li><a href="index.html/#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+<body>
+<nav>
+  <div class="logo">
+    <div style="font-size: 1.8rem; font-weight: 700; color: #0070f3;">Yazful <span class="logo-highlight">AI</span></div>
+  </div>
+  <div class="hamburger" onclick="document.body.classList.toggle('menu-open')">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="nav-links-wrapper">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <header class="hero">
-    <h1>About Yazful AI</h1>
-    <p>Meet the minds behind your automation engine. Built for founders. Powered by AI. Focused on results.</p>
-    <div class="hero-buttons">
-      <a href="#about-intro">Our Story</a>
-      <a href="#team" class="secondary">Meet the Team</a>
-    </div>
-  </header>
-  
-  <section class="section" id="about-intro">
-    <h2 class="section-title">Our Story</h2>
-    <p class="section-subtitle">We’re not just system builders — we’re growth engineers for service businesses.</p>
-    <div style="max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8; color: #444;">
-      <p><strong>Yazful</strong> was founded by Peter Vurgy — a seasoned automation strategist with over a decade of experience building scalable systems for real businesses. Peter created Yazful to give small teams enterprise-level automation without bloated costs, retainers, or complexity.</p>
-      <p>We're obsessed with real results. That means no filler, no templates, no noise — just clean systems built around your business, designed to save time, convert better, and unlock scalable growth.</p>
-      <p>We’re here to help founders build what works — not what looks good on paper. Everything we create is optimized to produce ROI, reduce manual work, and help your team focus on what truly matters.</p>
-    </div>
-  </section>
+<header class="hero">
+  <h1>Get to Know Yazful</h1>
+  <p>Elite AI Automation built by real humans who care about results, performance, and simplicity.</p>
+</header>
 
-  <!-- Trusted Tools & Badges Section -->
-  <section class="section" id="trusted-tools">
-    <h2 class="section-title">Built with Tools You Know</h2>
-    <p class="section-subtitle">We only use industry-leading tools and platforms that ensure speed, security, and scalability.</p>
-    <p style="text-align: center; font-size: 0.95rem;">
-      Learn more about <a href="https://zapier.com" target="_blank" rel="noopener noreferrer">Zapier</a> and <a href="https://www.calendly.com" target="_blank" rel="noopener noreferrer">Calendly</a>.
-    </p>
-    <div class="logos">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Zapier_logo.svg" alt="Zapier logo" loading="lazy" style="height: 40px;">
-      <img src="https://seeklogo.com/images/C/calendly-logo-FA2FE4D0E5-seeklogo.com.png" alt="Calendly logo" loading="lazy" style="height: 40px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Mailchimp_Logo_2018.svg" alt="Mailchimp logo" loading="lazy" style="height: 40px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Stripe_Logo%2C_revised_2016.svg" alt="Stripe logo" loading="lazy" style="height: 40px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Notion logo" loading="lazy" style="height: 40px;">
-    </div>
-  </section>
-  
-  <section class="section" id="values">
-    <h2 class="section-title">Our Core Values</h2>
-    <p class="section-subtitle">These are the principles that guide every system we build, every conversation we have, and every result we deliver.</p>
+<section class="section" id="our-story">
+  <h2 class="section-title">Our Story</h2>
+  <p class="section-subtitle">Where we began and where we’re headed</p>
+  <div style="max-width: 900px; margin: auto; font-size: 1.1rem; color: #444; line-height: 1.8;">
+    <p>Yazful was founded with one mission — to simplify automation for entrepreneurs and small businesses using real AI tools. Built by Peter Vurgy, an automation strategist with over a decade of hands-on tech experience, Yazful is a response to bloated software stacks and overpriced retainers.</p>
+    <p>We help service providers automate lead gen, bookings, onboarding, and follow-up using custom systems built on tools like Zapier, GPT-4, and Calendly. No templates. No fluff. Just elite workflows designed to save time and increase revenue.</p>
+  </div>
+</section>
+
+<section class="section" id="team">
+  <h2 class="section-title">Meet the Team</h2>
+  <p class="section-subtitle">The builders, strategists, and visionaries behind the magic</p>
     <div class="why-container">
       <div class="why-box">
-        <i class="fas fa-gem"></i>
-        <h3>Excellence Over Everything</h3>
-        <p>We don’t cut corners. Every line of code, every flow, and every decision is made with excellence in mind.</p>
-      </div>
-      <div class="why-box">
-        <i class="fas fa-handshake-angle"></i>
-        <h3>Client-First Always</h3>
-        <p>Your goals become our goals. We prioritize what brings you the best results — not what looks flashy or trendy.</p>
-      </div>
-      <div class="why-box">
-        <i class="fas fa-bullseye"></i>
-        <h3>Results-Driven</h3>
-        <p>We’re not just here to build. We’re here to make things work — faster conversions, better workflows, smarter outcomes.</p>
-      </div>
-      <div class="why-box">
-        <i class="fas fa-heart"></i>
-        <h3>Integrity + Transparency</h3>
-        <p>No shady upsells. No tech jargon. Just honest strategy and consistent communication at every step.</p>
-      </div>
-    </div>
-  </section>
-  
-  <section class="section" id="team">
-    <h2 class="section-title">Meet the Team</h2>
-    <p class="section-subtitle">A small but mighty crew dedicated to building automation that moves the needle.</p>
-    <div class="feature-grid">
-      <div class="feature-card" style="text-align: center;">
-        <h4>Peter Vurgy</h4>
+        <h3>Peter V</h3>
         <p>Founder & Automation Strategist</p>
-        <p style="font-size: 0.9rem; color: #666;">Leads strategy, client success, and system architecture for elite builds.</p>
+        <p>With over a decade of experience in software automation, Peter has built scalable systems for startups and enterprise teams alike. His focus is on building high-ROI workflows using proven tools like Zapier, Make, GPT-4, and custom scripts. Known for his clarity, integrity, and results-driven mindset, Peter leads Yazful with vision and purpose.</p>
       </div>
-      <div class="feature-card" style="text-align: center;">
-        <h4>Emily T.</h4>
-        <p>UX/UI Designer</p>
-        <p style="font-size: 0.9rem; color: #666;">Designs modern interfaces, workflows, and mobile-optimized experiences.</p>
+      <div class="why-box">
+        <h3>Sophia T</h3>
+        <p>UX Designer & Systems Integrator</p>
+        <p>As a certified UX expert and systems integrator, Sophia ensures every build is user-friendly, responsive, and aligned with the business' needs. She specializes in merging UI design with backend flows to create seamless experiences that drive action.</p>
       </div>
-      <div class="feature-card" style="text-align: center;">
-        <h4>Liam R.</h4>
-        <p>Lead Developer</p>
-        <p style="font-size: 0.9rem; color: #666;">Handles backend logic, integration, and automation scripts that scale.</p>
-      </div>
-    </div>
-  </section>
-  <!-- FAQ Section -->
-  <section class="section" id="faq">
-    <h2 class="section-title">Frequently Asked Questions</h2>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <h4>How long does setup take?</h4>
-        <p>Typically 5–10 business days. Larger projects may take up to 14 depending on scope.</p>
-      </div>
-      <div class="feature-card">
-        <h4>Do I need to learn any new tools?</h4>
-        <p>Nope. We integrate your existing stack or set up user-friendly dashboards and training videos.</p>
-      </div>
-      <div class="feature-card">
-        <h4>Is everything really custom?</h4>
-        <p>Yes. Every automation is designed around your offer, process, and platform. No templates.</p>
-      </div>
-      <div class="feature-card">
-        <h4>Do you offer support after launch?</h4>
-        <p>Every plan includes post-launch support. You can also choose our optimization add-on.</p>
-      </div>
-      <div class="feature-card">
-        <h4>Can you build white-label for my agency?</h4>
-        <p>Absolutely. We build under your brand — great for agencies and freelancers scaling fast.</p>
-      </div>
-      <div class="feature-card">
-        <h4>How do I know it’s working?</h4>
-        <p>All builds come with visual flow maps, a client dashboard, and KPI tracking where applicable.</p>
-      </div>
-      <div class="feature-card">
-        <h4>Is there a satisfaction guarantee?</h4>
-        <p>Yes! If you’re not satisfied with the system we build, we offer a full refund within 30 days of delivery.</p>
+      <div class="why-box">
+        <h3>Leo N</h3>
+        <p>AI Developer & Tech Lead</p>
+        <p>Leo brings a strong background in AI and software engineering, with certifications in Python, AI prompt engineering, and full-stack development. He’s passionate about leveraging OpenAI and other LLMs to build intelligent, lightweight systems.</p>
       </div>
     </div>
-  </section>
-  <script>
-    // Intersection Observer for section fade-in
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.section').forEach(el => observer.observe(el));
-    // Hamburger menu toggle
-    function toggleMenu() {
-      document.querySelector('.nav-menu').classList.toggle('open');
-    }
-  </script>
+</section>
 
-  <!-- Testimonials/CTA Combo Wrapper -->
-  <div style="margin: 0; padding: 0;">
-    <div class="swiper testimonial-swiper swiper-container" style="margin-bottom: 0 !important; padding-bottom: 0 !important; height: auto; overflow: visible;">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide feature-card" style="text-align: center;">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Michelle D., Business Coach testimonial" loading="lazy" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 15px;">
-          <p><strong>★★★★★</strong></p>
-          <p>“I closed 3 high-ticket clients within the first 2 weeks of launching the funnel Yazful built.”</p>
-          <p><strong>- Michelle D.</strong><br><span style="font-size: 0.9rem; color: #777;">Business Coach</span></p>
-        </div>
-        <div class="swiper-slide feature-card" style="text-align: center;">
-          <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="George P., Fitness Consultant testimonial" loading="lazy" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 15px;">
-          <p><strong>★★★★★</strong></p>
-          <p>“They automated my onboarding and lead flows. I saved 15+ hours a week.”</p>
-          <p><strong>- George P.</strong><br><span style="font-size: 0.9rem; color: #777;">Fitness Consultant</span></p>
-        </div>
-        <div class="swiper-slide feature-card" style="text-align: center;">
-          <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Rebecca A., Home Services Pro testimonial" loading="lazy" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 15px;">
-          <p><strong>★★★★★</strong></p>
-          <p>“Yazful built a system that now does it all for me. Haven’t touched my inbox in weeks.”</p>
-          <p><strong>- Rebecca A.</strong><br><span style="font-size: 0.9rem; color: #777;">Home Services Pro</span></p>
-        </div>
-      </div>
-      <div class="swiper-pagination" style="margin-top: 20px;"></div>
+<section class="section" id="mission">
+  <h2 class="section-title">Our Mission & Values</h2>
+  <p class="section-subtitle">How we think. What we stand for. Why it matters.</p>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <h4>Transparency</h4>
+      <p>No hidden fees. No confusing jargon. Just clear deliverables and results you can track.</p>
     </div>
-    <section class="section" style="text-align: center; margin-top: 0; padding-top: 60px;">
-      <h2 class="section-title">Want Similar Results?</h2>
-      <p class="section-subtitle">Our clients are automating onboarding, saving hours, and booking more calls — let’s do the same for you.</p>
-      <a href="#contact" style="background: #0070f3; color: white; padding: 14px 28px; border-radius: 8px; font-weight: bold; display: inline-block; margin-top: 20px;">Book a Free Strategy Call</a>
-    </section>
+    <div class="feature-card">
+      <h4>Performance</h4>
+      <p>We build systems to convert. Whether it’s leads, bookings, or reviews — results matter.</p>
+    </div>
+    <div class="feature-card">
+      <h4>Efficiency</h4>
+      <p>We use the least tools possible for maximum output — keeping your ops clean and lean.</p>
+    </div>
   </div>
-  <!-- Remove excess margin or gap after Swiper -->
-  <style>
-  .swiper {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-  }
-  .swiper-container {
-    width: 100%;
-    padding-bottom: 40px;
-  }
-  .swiper-wrapper {
-    display: flex;
-  }
-  .swiper-slide {
-    flex-shrink: 0;
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-  }
-  .swiper-pagination {
-    margin: 0 !important;
-    height: auto !important;
-  }
-  </style>
+</section>
 
-<!-- Contact Section -->
 <section class="section" id="contact">
-  <h2 class="section-title">Book Your Free Strategy Call</h2>
-  <p class="section-subtitle">Let’s uncover how AI can streamline your business and boost profits. No pressure. Just strategy.</p>
+  <h2 class="section-title">Work With Us</h2>
+  <p class="section-subtitle">Book your free strategy call and let's start building your AI-powered growth system</p>
   <div style="max-width: 800px; margin: 40px auto; background: #f7f9ff; border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);">
-    <div style="text-align: center; margin-bottom: 20px;">
-      <h3 style="font-size: 1.4rem; margin-bottom: 10px;">✅ Talk With an Automation Expert</h3>
-      <p style="font-size: 1rem; color: #555;">We’ll map out your bottlenecks, goals, and ideal automations in a 100% free, no-commitment Zoom call.</p>
-    </div>
     <div style="overflow:hidden; min-width:320px; height:700px;">
       <iframe src="https://calendly.com/shop-yazful/30min" width="100%" height="100%" frameborder="0" scrolling="no" style="border:none; max-width:100%; overflow:hidden;"></iframe>
     </div>
   </div>
-  <p style="font-size: 0.9rem; color: #666; text-align: center; margin-top: 20px;">Your privacy is important. We never share your information. By booking, you agree to be contacted about this service.</p>
 </section>
+
+<footer style="background: #111; color: #999; text-align: center; padding: 40px 20px;">
+  <p>&copy; 2025 Yazful Automation Agency. All rights reserved.</p>
+</footer>
+</body>
+</html>
 
 <!-- Final CTA -->
 <section class="cta" style="text-align: center; background: #0070f3; color: white;">
   <h2 style="font-size: 2rem; margin-bottom: 20px;">Let’s Build Your Automated Growth Machine</h2>
   <p style="max-width: 700px; margin: 0 auto 30px;">We’re ready when you are. Stop doing what software can do for you. Start scaling like you mean it.</p>
-  <a href="#contact" style="background: white; color: #0070f3; padding: 14px 28px; font-weight: bold; border-radius: 8px; display: inline-block;">Book Your Free Strategy Call</a>
+  <a href="#contact" style="background: white; color: #0070f3; padding: 14px 28px; font-weight: bold; border-radius: 8px; display: inline-block;">Book My Free Strategy Call Now</a>
 </section>
 
 <!-- Footer -->
 <footer style="background: #111; color: #999; text-align: center; padding: 40px 20px;">
   <p>&copy; 2025 Yazful Automation Agency. All rights reserved.</p>
-  <div class="footer-links">
+  <div class="footer-links" style="margin-top: 20px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#solutions">Solutions</a>
@@ -769,7 +633,21 @@
     <a href="#contact">Contact</a>
     <a href="#">Privacy Policy</a>
     <a href="#">Terms of Service</a>
+    <!-- Social Media Links with Icons -->
+    <a href="https://www.linkedin.com/company/yazful" target="_blank" rel="noopener noreferrer" title="LinkedIn" style="display: flex; align-items: center; gap: 6px;">
+      <i class="fab fa-linkedin" aria-hidden="true"></i><span style="font-size: 0.98em;">LinkedIn</span>
+    </a>
+    <a href="https://instagram.com/yazful" target="_blank" rel="noopener noreferrer" title="Instagram" style="display: flex; align-items: center; gap: 6px;">
+      <i class="fab fa-instagram" aria-hidden="true"></i><span style="font-size: 0.98em;">Instagram</span>
+    </a>
+    <a href="https://youtube.com/@yazful" target="_blank" rel="noopener noreferrer" title="YouTube" style="display: flex; align-items: center; gap: 6px;">
+      <i class="fab fa-youtube" aria-hidden="true"></i><span style="font-size: 0.98em;">YouTube</span>
+    </a>
   </div>
 </footer>
 
 <!-- PHASE 3 END -->
+
+    .dark .logo span {
+      color: #ffffff !important;
+    }
