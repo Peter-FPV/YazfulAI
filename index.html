@@ -444,17 +444,23 @@
   }
     /* DARK MODE BASE */
     .dark body {
-      background-color: #121212;
-      color: #f5f5f5;
+      background-color: #2a2a2a;
+      color: #f0f0f0;
     }
-    .dark nav,
+    .dark nav {
+      background-color: #2a2a2a;
+      color: #f0f0f0;
+    }
     .dark .feature-card,
     .dark .why-box,
-    .dark footer,
-    .dark .quote,
     .dark .testimonial-swiper .swiper-slide {
+      background-color: #383838;
+      color: #f0f0f0;
+    }
+    .dark footer,
+    .dark .quote {
       background-color: #1e1e1e;
-      color: #f5f5f5;
+      color: #f0f0f0;
     }
     .dark nav ul li a {
       color: #ddd;
@@ -467,22 +473,31 @@
                   url('https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=1400') center/cover no-repeat;
     }
     .dark .hero p {
-      color: #ccc;
+      color: #e0e0e0;
     }
     .dark .section-subtitle {
-      color: #bbb;
+      color: #dddddd;
     }
     .dark .sticky-cta {
       background: #66aaff;
       color: #000;
     }
     .dark .cta {
-      background: #121212;
+      background: #1a1a1a;
       color: #fff;
     }
     .dark .cta a {
       background: #fff;
-      color: #0070f3;
+      color: #0056c7;
+    }
+    .dark .logo span {
+      color: #ffffff !important;
+    }
+    .dark #contact h3 {
+      /* Remove this rule in favor of .contact-heading for specificity */
+    }
+    .dark .contact-heading {
+      color: #000000 !important;
     }
   </style>
   <!-- Favicon -->
@@ -932,10 +947,10 @@
   <p class="section-subtitle">Let’s uncover how AI can streamline your business and boost profits. No pressure. Just strategy.</p>
   <div style="max-width: 800px; margin: 40px auto; background: #f7f9ff; border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);">
     <div style="text-align: center; margin-bottom: 20px;">
-      <h3 style="font-size: 1.4rem; margin-bottom: 10px;">✅ Talk With an Automation Expert</h3>
+      <h3 class="contact-heading" style="font-size: 1.4rem; margin-bottom: 10px;">✅ Talk With an Automation Expert</h3>
       <p style="font-size: 1rem; color: #555;">We’ll map out your bottlenecks, goals, and ideal automations in a 100% free, no-commitment Zoom call.</p>
     </div>
-    <div style="overflow:hidden; min-width:320px; height:700px;">
+    <div style="overflow:hidden; min-width:320px; height:950px;">
       <iframe src="https://calendly.com/shop-yazful/30min" width="100%" height="100%" frameborder="0" scrolling="no" style="border:none; max-width:100%; overflow:hidden;"></iframe>
     </div>
   </div>
@@ -976,7 +991,3 @@
 </footer>
 
 <!-- PHASE 3 END -->
-
-    .dark .logo span {
-      color: #ffffff !important;
-    }
