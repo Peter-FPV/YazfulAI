@@ -26,6 +26,9 @@
       color: #1e1e1e;
       line-height: 1.7;
     }
+    p {
+      color: #1e1e1e;
+    }
     a {
       text-decoration: none;
       color: inherit;
@@ -60,9 +63,6 @@
 
     .logo-highlight {
       color: #1e1e1e;
-    }
-    .dark .logo-highlight {
-      color: #ffffff;
     }
     nav ul {
       display: flex;
@@ -151,7 +151,7 @@
     .section-subtitle {
       font-size: 1.1rem;
       text-align: center;
-      color: #555;
+      color: #1e1e1e;
       margin-bottom: 60px;
       max-width: 800px;
       margin-left: auto;
@@ -169,8 +169,13 @@
       border: 1px solid #e1eaff;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
       text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .why-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
     }
     .why-box i {
       font-size: 2rem;
@@ -182,7 +187,7 @@
       margin-bottom: 10px;
     }
     .why-box p {
-      color: #555;
+      color: #1e1e1e;
     }
 
     /* FEATURE GRID */
@@ -199,7 +204,12 @@
       background-color: white;
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
     }
     .feature-card h4 {
       margin-bottom: 10px;
@@ -371,10 +381,11 @@
     font-size: 1.2rem;
   }
 
-  .feature-card p,
-  .why-box p {
-    font-size: 0.95rem;
-  }
+    .feature-card p,
+    .why-box p {
+      font-size: 0.95rem;
+      color: #1e1e1e;
+    }
 
   .hamburger {
   display: none;
@@ -442,63 +453,7 @@
   .hamburger span {
     transition: transform 0.3s, opacity 0.3s;
   }
-    /* DARK MODE BASE */
-    .dark body {
-      background-color: #2a2a2a;
-      color: #f0f0f0;
-    }
-    .dark nav {
-      background-color: #2a2a2a;
-      color: #f0f0f0;
-    }
-    .dark .feature-card,
-    .dark .why-box,
-    .dark .testimonial-swiper .swiper-slide {
-      background-color: #383838;
-      color: #f0f0f0;
-    }
-    .dark footer,
-    .dark .quote {
-      background-color: #1e1e1e;
-      color: #f0f0f0;
-    }
-    .dark nav ul li a {
-      color: #ddd;
-    }
-    .dark nav ul li a::after {
-      background: #66aaff;
-    }
-    .dark .hero {
-      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-                  url('https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=1400') center/cover no-repeat;
-    }
-    .dark .hero p {
-      color: #e0e0e0;
-    }
-    .dark .section-subtitle {
-      color: #dddddd;
-    }
-    .dark .sticky-cta {
-      background: #66aaff;
-      color: #000;
-    }
-    .dark .cta {
-      background: #1a1a1a;
-      color: #fff;
-    }
-    .dark .cta a {
-      background: #fff;
-      color: #0056c7;
-    }
-    .dark .logo span {
-      color: #ffffff !important;
-    }
-    .dark #contact h3 {
-      /* Remove this rule in favor of .contact-heading for specificity */
-    }
-    .dark .contact-heading {
-      color: #000000 !important;
-    }
+    /* (Dark mode styles removed) */
   </style>
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/petervurgy/assets/main/yazful-favicon.png" />
@@ -533,11 +488,6 @@
   }
   </script>
 </head>
-<script>
-  // Detect user's system preference and store in localStorage
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (prefersDark) document.documentElement.classList.add('dark');
-</script>
 <body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script>
@@ -620,27 +570,27 @@
   
   <section id="about">
     <h2 class="section-title">Why Choose Yazful?</h2>
-    <p>Yazful was founded by Peter Vurgy, a seasoned automation strategist and tech entrepreneur with over a decade of experience building smart systems for real-world businesses. Our mission is rooted in transparency, reliability, and a deep understanding of how modern business works. We’re not just builders — we’re partners. We take the time to learn your business model, goals, and bottlenecks so we can create automation that truly serves you. Every system is tested, documented, and built for performance, so you can trust that what we deliver is dependable, efficient, and designed for results.</p>
+    <p style="color: #1e1e1e; margin-bottom: 40px;">Yazful was founded by Peter Vurgy, a seasoned automation strategist and tech entrepreneur with over a decade of experience building smart systems for real-world businesses. Our mission is rooted in transparency, reliability, and a deep understanding of how modern business works. We’re not just builders — we’re partners. We take the time to learn your business model, goals, and bottlenecks so we can create automation that truly serves you. Every system is tested, documented, and built for performance, so you can trust that what we deliver is dependable, efficient, and designed for results.</p>
     <div class="why-container">
       <div class="why-box">
         <i class="fas fa-bolt"></i>
         <h3>Fast Delivery</h3>
-        <p>Most systems are live in under 10 business days — and tested before launch.</p>
+        <p style="color: #1e1e1e;">Most systems are live in under 10 business days — and tested before launch.</p>
       </div>
       <div class="why-box">
         <i class="fas fa-brain"></i>
         <h3>Real AI, Not Hype</h3>
-        <p>We use GPT-4, OpenAI, and real logic flows — not gimmicks or fluff tools.</p>
+        <p style="color: #1e1e1e;">We use GPT-4, OpenAI, and real logic flows — not gimmicks or fluff tools.</p>
       </div>
       <div class="why-box">
         <i class="fas fa-robot"></i>
         <h3>Custom Automations</h3>
-        <p>Every build is designed around your business — no templates, ever.</p>
+        <p style="color: #1e1e1e;">Every build is designed around your business — no templates, ever.</p>
       </div>
       <div class="why-box">
         <i class="fas fa-rocket"></i>
         <h3>Proven Results</h3>
-        <p>Our automations help close deals, reduce costs, and free up your time.</p>
+        <p style="color: #1e1e1e;">Our automations help close deals, reduce costs, and free up your time.</p>
       </div>
     </div>
   </section>
@@ -651,16 +601,16 @@
     <p class="section-subtitle">Proof that automation isn’t just convenient — it’s profitable.</p>
     <div class="why-container">
       <div class="why-box">
-        <h3>28%</h3>
-        <p>Average increase in lead conversion after AI follow-up.</p>
+        <h3 style="color: #1e1e1e;">28%</h3>
+        <p style="color: #1e1e1e;">Average increase in lead conversion after AI follow-up.</p>
       </div>
       <div class="why-box">
-        <h3>15+ hrs</h3>
-        <p>Saved per week with AI client onboarding flows.</p>
+        <h3 style="color: #1e1e1e;">15+ hrs</h3>
+        <p style="color: #1e1e1e;">Saved per week with AI client onboarding flows.</p>
       </div>
       <div class="why-box">
-        <h3>100+</h3>
-        <p>Businesses listed in under 10 minutes.</p>
+        <h3 style="color: #1e1e1e;">100+</h3>
+        <p style="color: #1e1e1e;">Businesses listed in under 10 minutes.</p>
       </div>
     </div>
   </section>
@@ -668,13 +618,13 @@
   <section class="quote">
     <blockquote>
       <i class="fas fa-quote-left" style="font-size: 2rem; color: #fff; margin-bottom: 20px;"></i>
-      “Yazful helped me automate what used to take 2–3 hours a day into a system that now runs hands-free. Game changer.”
+      <span style="color: #f0f0f0;">“Yazful helped me automate what used to take 2–3 hours a day into a system that now runs hands-free. Game changer.”</span>
     </blockquote>
-    <cite>— Sarah P., Coach & Consultant</cite>
+    <cite style="color: #f0f0f0;">— Sarah P., Coach & Consultant</cite>
   </section>
 
   <h2 class="section-title" style="margin-top: 60px;">Trusted By Innovators</h2>
-  <p class="section-subtitle">Powering growth for brands across AI, tech, and service industries</p>
+  <p class="section-subtitle" style="color: #1e1e1e;">Powering growth for brands across AI, tech, and service industries</p>
   <section class="logos">
     <img src="https://img.icons8.com/?size=100&id=ka3InxFU3QZa&format=png&color=000000" alt="OpenAI logo" loading="lazy">
     <img src="https://img.icons8.com/color/96/google-calendar--v2.png" alt="Google Calendar logo" loading="lazy">
@@ -737,256 +687,248 @@
 <!-- PHASE 2 START -->
 
 <!-- Use Cases by Industry -->
-<section class="section" id="solutions">
-  <h2 class="section-title">Tailored Use Cases by Industry</h2>
-  <p class="section-subtitle">Whether you're a solo entrepreneur or a 20+ team operation, our automations are designed to scale with your business and fit your exact workflows.</p>
-  <div class="feature-grid">
-    <div class="feature-card">
-      <h4>Real Estate Agents</h4>
-      <p>Instant lead response, showing appointment booking, auto drip campaigns for listings, follow-up with potential buyers.</p>
+  <section class="section" id="solutions">
+    <h2 class="section-title">Tailored Use Cases by Industry</h2>
+    <p class="section-subtitle" style="color: #1e1e1e;">Whether you're a solo entrepreneur or a 20+ team operation, our automations are designed to scale with your business and fit your exact workflows.</p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h4>Real Estate Agents</h4>
+        <p style="color: #1e1e1e;">Instant lead response, showing appointment booking, auto drip campaigns for listings, follow-up with potential buyers.</p>
+      </div>
+      <div class="feature-card">
+        <h4>Fitness Coaches</h4>
+        <p style="color: #1e1e1e;">Automated client onboarding, recurring payment reminders, progress check-ins, reschedule flows, and digital programs.</p>
+      </div>
+      <div class="feature-card">
+        <h4>Online Course Creators</h4>
+        <p style="color: #1e1e1e;">Email/SMS flows for nurturing leads, upsells, renewals, and testimonial requests — all synced to your course platform.</p>
+      </div>
+      <div class="feature-card">
+        <h4>E-Commerce Brands</h4>
+        <p style="color: #1e1e1e;">Recover abandoned carts, cross-sell after purchase, loyalty flows, inventory alerts, and VIP campaigns with automation.</p>
+      </div>
+      <div class="feature-card">
+        <h4>Marketing Agencies</h4>
+        <p style="color: #1e1e1e;">White-label onboarding portals, client check-ins, proof of delivery automation, reports, and contract reminders.</p>
+      </div>
+      <div class="feature-card">
+        <h4>Service-Based Startups</h4>
+        <p style="color: #1e1e1e;">All-in-one operating system — CRM, appointment calendar, payments, chatbot, follow-up flows. Built fast and scalable.</p>
+      </div>
     </div>
-    <div class="feature-card">
-      <h4>Fitness Coaches</h4>
-      <p>Automated client onboarding, recurring payment reminders, progress check-ins, reschedule flows, and digital programs.</p>
-    </div>
-    <div class="feature-card">
-      <h4>Online Course Creators</h4>
-      <p>Email/SMS flows for nurturing leads, upsells, renewals, and testimonial requests — all synced to your course platform.</p>
-    </div>
-    <div class="feature-card">
-      <h4>E-Commerce Brands</h4>
-      <p>Recover abandoned carts, cross-sell after purchase, loyalty flows, inventory alerts, and VIP campaigns with automation.</p>
-    </div>
-    <div class="feature-card">
-      <h4>Marketing Agencies</h4>
-      <p>White-label onboarding portals, client check-ins, proof of delivery automation, reports, and contract reminders.</p>
-    </div>
-    <div class="feature-card">
-      <h4>Service-Based Startups</h4>
-      <p>All-in-one operating system — CRM, appointment calendar, payments, chatbot, follow-up flows. Built fast and scalable.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
 <!-- Our Process Timeline -->
-<section class="section" id="process">
-  <h2 class="section-title">How Our Process Works</h2>
-  <p class="section-subtitle">You stay focused on your business — we build a system that runs it better, faster, and without the headaches.</p>
-  <div class="why-container">
-    <div class="why-box">
-      <i class="fas fa-magnifying-glass-chart"></i>
-      <h3>1. Free Discovery</h3>
-      <p>We analyze your operations, CRM, and tech stack to uncover where automation can save time or increase sales.</p>
+  <section class="section" id="process">
+    <h2 class="section-title">How Our Process Works</h2>
+    <p class="section-subtitle" style="color: #1e1e1e;">You stay focused on your business — we build a system that runs it better, faster, and without the headaches.</p>
+    <div class="why-container">
+      <div class="why-box">
+        <i class="fas fa-magnifying-glass-chart"></i>
+        <h3>1. Free Discovery</h3>
+        <p style="color: #1e1e1e;">We analyze your operations, CRM, and tech stack to uncover where automation can save time or increase sales.</p>
+      </div>
+      <div class="why-box">
+        <i class="fas fa-gears"></i>
+        <h3>2. Custom Plan</h3>
+        <p style="color: #1e1e1e;">Receive a clear system blueprint with use case flows, tools we’ll connect, timelines, and fixed pricing.</p>
+      </div>
+      <div class="why-box">
+        <i class="fas fa-screwdriver-wrench"></i>
+        <h3>3. Build + Launch</h3>
+        <p style="color: #1e1e1e;">We do everything. You test flows, approve them, and go live. Usually takes 5–10 days depending on complexity.</p>
+      </div>
+      <div class="why-box">
+        <i class="fas fa-chart-line"></i>
+        <h3>4. Optimize + Support</h3>
+        <p style="color: #1e1e1e;">After launch, we monitor the system and fine-tune your workflows with real data. Support always included.</p>
+      </div>
     </div>
-    <div class="why-box">
-      <i class="fas fa-gears"></i>
-      <h3>2. Custom Plan</h3>
-      <p>Receive a clear system blueprint with use case flows, tools we’ll connect, timelines, and fixed pricing.</p>
-    </div>
-    <div class="why-box">
-      <i class="fas fa-screwdriver-wrench"></i>
-      <h3>3. Build + Launch</h3>
-      <p>We do everything. You test flows, approve them, and go live. Usually takes 5–10 days depending on complexity.</p>
-    </div>
-    <div class="why-box">
-      <i class="fas fa-chart-line"></i>
-      <h3>4. Optimize + Support</h3>
-      <p>After launch, we monitor the system and fine-tune your workflows with real data. Support always included.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
 <!-- Plans & Pricing -->
   <section class="section" id="plans">
     <h2 class="section-title">Transparent Pricing</h2>
-    <p class="section-subtitle">Every system we build is 100% custom. Pricing varies based on your unique business needs, complexity, and desired outcomes. The best way to determine your ideal setup and pricing is to connect with us on a quick call where we can explore your goals and recommend a tailored solution.</p>
+    <p class="section-subtitle" style="color: #1e1e1e;">Every system we build is 100% custom. Pricing varies based on your unique business needs, complexity, and desired outcomes. The best way to determine your ideal setup and pricing is to connect with us on a quick call where we can explore your goals and recommend a tailored solution.</p>
   <div class="feature-grid">
     <div class="feature-card">
       <h4>Starter Plan</h4>
       <ul>
-        <li>✓ AI lead follow-up flow</li>
-        <li>✓ 1 landing page or chatbot</li>
-        <li>✓ Email & SMS setup</li>
-        <li>✓ Zapier or Make.com config</li>
-        <li>✓ 7-day launch support</li>
+        <li style="color: #1e1e1e;">✓ AI lead follow-up flow</li>
+        <li style="color: #1e1e1e;">✓ 1 landing page or chatbot</li>
+        <li style="color: #1e1e1e;">✓ Email & SMS setup</li>
+        <li style="color: #1e1e1e;">✓ Zapier or Make.com config</li>
+        <li style="color: #1e1e1e;">✓ 7-day launch support</li>
       </ul>
     </div>
     <div class="feature-card">
       <h4>Growth Plan</h4>
       <ul>
-        <li>✓ Everything in Starter</li>
-        <li>✓ Multi-step automation flow</li>
-        <li>✓ Funnel + CRM integration</li>
-        <li>✓ Onboarding system</li>
-        <li>✓ 14-day launch support</li>
+        <li style="color: #1e1e1e;">✓ Everything in Starter</li>
+        <li style="color: #1e1e1e;">✓ Multi-step automation flow</li>
+        <li style="color: #1e1e1e;">✓ Funnel + CRM integration</li>
+        <li style="color: #1e1e1e;">✓ Onboarding system</li>
+        <li style="color: #1e1e1e;">✓ 14-day launch support</li>
       </ul>
     </div>
     <div class="feature-card">
       <h4>Enterprise Plan</h4>
       <ul>
-        <li>✓ Everything in Growth</li>
-        <li>✓ Full system audit</li>
-        <li>✓ Dashboard + metrics build</li>
-        <li>✓ Team training walkthrough</li>
-        <li>✓ 30-day support & optimization</li>
+        <li style="color: #1e1e1e;">✓ Everything in Growth</li>
+        <li style="color: #1e1e1e;">✓ Full system audit</li>
+        <li style="color: #1e1e1e;">✓ Dashboard + metrics build</li>
+        <li style="color: #1e1e1e;">✓ Team training walkthrough</li>
+        <li style="color: #1e1e1e;">✓ 30-day support & optimization</li>
       </ul>
     </div>
   </div>
 </section>
 
 <!-- Competitor Comparison Table -->
-<section class="section" id="compare">
-  <h2 class="section-title">Yazful vs Other Options</h2>
-  <p class="section-subtitle">Why settle for average? Here’s how we outperform typical agencies, VAs, and DIY software stacks.</p>
-  <div style="overflow-x:auto; margin-top: 40px;">
-    <table style="width:100%; border-collapse: collapse;">
-      <thead>
-        <tr style="background: #0070f3; color: white;">
-          <th style="padding: 14px; text-align: left;">Feature</th>
-          <th style="padding: 14px; text-align: center;">Yazful</th>
-          <th style="padding: 14px; text-align: center;">Typical Agency</th>
-          <th style="padding: 14px; text-align: center;">DIY Tools</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td style="padding:14px;">Done-for-you system</td><td align="center">✔</td><td align="center">✔</td><td align="center">✖</td></tr>
-        <tr><td style="padding:14px;">AI-powered workflows</td><td align="center">✔</td><td align="center">✖</td><td align="center">✖</td></tr>
-        <tr><td style="padding:14px;">Fast delivery (5–10 days)</td><td align="center">✔</td><td align="center">✖ (4–6 weeks)</td><td align="center">—</td></tr>
-        <tr><td style="padding:14px;">No retainers required</td><td align="center">✔</td><td align="center">✖</td><td align="center">✔</td></tr>
-        <tr><td style="padding:14px;">Built around your business</td><td align="center">✔</td><td align="center">✖ (template)</td><td align="center">✖</td></tr>
-        <tr><td style="padding:14px;">White-label options</td><td align="center">✔</td><td align="center">✖</td><td align="center">—</td></tr>
-        <tr><td style="padding:14px;">Live dashboards</td><td align="center">✔</td><td align="center">✖</td><td align="center">✖</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+  <section class="section" id="compare">
+    <h2 class="section-title">Yazful vs Other Options</h2>
+    <p class="section-subtitle" style="color: #1e1e1e;">Why settle for average? Here’s how we outperform typical agencies, VAs, and DIY software stacks.</p>
+    <div style="overflow-x:auto; margin-top: 40px;">
+      <table style="width:100%; border-collapse: collapse;">
+        <thead>
+          <tr style="background: #0070f3; color: white;">
+            <th style="padding: 14px; text-align: left;">Feature</th>
+            <th style="padding: 14px; text-align: center;">Yazful</th>
+            <th style="padding: 14px; text-align: center;">Typical Agency</th>
+            <th style="padding: 14px; text-align: center;">DIY Tools</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:14px; color: #1e1e1e;">Done-for-you system</td><td align="center" style="color: #1e1e1e;">✔</td><td align="center" style="color: #1e1e1e;">✔</td><td align="center" style="color: #1e1e1e;">✖</td></tr>
+          <tr><td style="padding:14px; color: #1e1e1e;">AI-powered workflows</td><td align="center" style="color: #1e1e1e;">✔</td><td align="center" style="color: #1e1e1e;">✖</td><td align="center" style="color: #1e1e1e;">✖</td></tr>
+          <tr><td style="padding:14px; color: #1e1e1e;">Fast delivery (5–10 days)</td><td align="center" style="color: #1e1e1e;">✔</td><td align="center" style="color: #1e1e1e;">✖ (4–6 weeks)</td><td align="center" style="color: #1e1e1e;">—</td></tr>
+          <tr><td style="padding:14px; color: #1e1e1e;">No retainers required</td><td align="center" style="color: #1e1e1e;">✔</td><td align="center" style="color: #1e1e1e;">✖</td><td align="center" style="color: #1e1e1e;">✔</td></tr>
+          <tr><td style="padding:14px; color: #1e1e1e;">Built around your business</td><td align="center" style="color: #1e1e1e;">✔</td><td align="center" style="color: #1e1e1e;">✖ (template)</td><td align="center" style="color: #1e1e1e;">✖</td></tr>
+          <tr><td style="padding:14px; color: #1e1e1e;">White-label options</td><td align="center" style="color: #1e1e1e;">✔</td><td align="center" style="color: #1e1e1e;">✖</td><td align="center" style="color: #1e1e1e;">—</td></tr>
+          <tr><td style="padding:14px; color: #1e1e1e;">Live dashboards</td><td align="center" style="color: #1e1e1e;">✔</td><td align="center" style="color: #1e1e1e;">✖</td><td align="center" style="color: #1e1e1e;">✖</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
 <!-- PHASE 2 END -->
 <!-- PHASE 3 START -->
 
 <!-- About Yazful -->
-<section class="section" id="about">
-  <h2 class="section-title">About Yazful</h2>
-  <p class="section-subtitle">Built for founders. Powered by AI. Focused on outcomes.</p>
-  <div style="max-width: 800px; margin: auto; font-size: 1.1rem; color: #444; line-height: 1.8;">
-    <p>Yazful was founded by Peter V, a seasoned automation strategist and tech entrepreneur who spent the last decade building systems for real businesses. After working with both startups and enterprise-level teams, Peter launched Yazful to make AI and automation simple, accessible, and wildly effective for entrepreneurs and service providers alike.</p>
-    <p>We’re obsessed with ROI. Every automation we build is designed to either:</p>
-    <ul style="margin-left: 20px; padding-top: 10px;">
-      <li>✓ Save time (internal ops)</li>
-      <li>✓ Increase conversions (follow-up flows)</li>
-      <li>✓ Boost revenue (funnels + CRM systems)</li>
-    </ul>
-    <p style="margin-top: 20px;">With no fluff, no long-term retainers, and no bloated tech — just results. We’re here to help you build once and scale forever.</p>
-  </div>
-</section>
+  <section class="section" id="about">
+    <h2 class="section-title">About Yazful</h2>
+    <p class="section-subtitle" style="color: #1e1e1e;">Built for founders. Powered by AI. Focused on outcomes.</p>
+    <div style="max-width: 800px; margin: auto; font-size: 1.1rem; color: #444; line-height: 1.8;">
+      <p style="color: #1e1e1e;">Yazful was founded by Peter V, a seasoned automation strategist and tech entrepreneur who spent the last decade building systems for real businesses. After working with both startups and enterprise-level teams, Peter launched Yazful to make AI and automation simple, accessible, and wildly effective for entrepreneurs and service providers alike.</p>
+      <p style="color: #1e1e1e;">We’re obsessed with ROI. Every automation we build is designed to either:</p>
+      <ul style="margin-left: 20px; padding-top: 10px;">
+        <li style="color: #1e1e1e;">✓ Save time (internal ops)</li>
+        <li style="color: #1e1e1e;">✓ Increase conversions (follow-up flows)</li>
+        <li style="color: #1e1e1e;">✓ Boost revenue (funnels + CRM systems)</li>
+      </ul>
+      <p style="margin-top: 20px; color: #1e1e1e;">With no fluff, no long-term retainers, and no bloated tech — just results. We’re here to help you build once and scale forever.</p>
+    </div>
+  </section>
 
 <!-- Testimonials -->
 <div class="swiper testimonial-swiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide feature-card" style="text-align: center;">
       <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Michelle" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 15px;" loading="lazy">
-      <p><strong>★★★★★</strong></p>
-      <p>“I closed 3 high-ticket clients within the first 2 weeks of launching the funnel Yazful built.”</p>
-      <p><strong>- Michelle D.</strong><br><span style="font-size: 0.9rem; color: #777;">Business Coach</span></p>
+      <p style="color: #1e1e1e;"><strong>★★★★★</strong></p>
+      <p style="color: #1e1e1e;">“I closed 3 high-ticket clients within the first 2 weeks of launching the funnel Yazful built.”</p>
+      <p style="color: #1e1e1e;"><strong>- Michelle D.</strong><br><span style="font-size: 0.9rem; color: #777;">Business Coach</span></p>
     </div>
     <div class="swiper-slide feature-card" style="text-align: center;">
       <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="George" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 15px;" loading="lazy">
-      <p><strong>★★★★★</strong></p>
-      <p>“They automated my onboarding and lead flows. I saved 15+ hours a week.”</p>
-      <p><strong>- George P.</strong><br><span style="font-size: 0.9rem; color: #777;">Fitness Consultant</span></p>
+      <p style="color: #1e1e1e;"><strong>★★★★★</strong></p>
+      <p style="color: #1e1e1e;">“They automated my onboarding and lead flows. I saved 15+ hours a week.”</p>
+      <p style="color: #1e1e1e;"><strong>- George P.</strong><br><span style="font-size: 0.9rem; color: #777;">Fitness Consultant</span></p>
     </div>
     <div class="swiper-slide feature-card" style="text-align: center;">
       <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Rebecca" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 15px;" loading="lazy">
-      <p><strong>★★★★★</strong></p>
-      <p>“Yazful built a system that now does it all for me. Haven’t touched my inbox in weeks.”</p>
-      <p><strong>- Rebecca A.</strong><br><span style="font-size: 0.9rem; color: #777;">Home Services Pro</span></p>
+      <p style="color: #1e1e1e;"><strong>★★★★★</strong></p>
+      <p style="color: #1e1e1e;">“Yazful built a system that now does it all for me. Haven’t touched my inbox in weeks.”</p>
+      <p style="color: #1e1e1e;"><strong>- Rebecca A.</strong><br><span style="font-size: 0.9rem; color: #777;">Home Services Pro</span></p>
     </div>
   </div>
   <div class="swiper-pagination"></div>
 </div>
 
 <!-- FAQ Section -->
-<section class="section" id="faq">
-  <h2 class="section-title">Frequently Asked Questions</h2>
-  <div class="feature-grid">
-    <div class="feature-card">
-      <h4>How long does setup take?</h4>
-      <p>Typically 5–10 business days. Larger projects may take up to 14 depending on scope.</p>
+  <section class="section" id="faq">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h4>How long does setup take?</h4>
+        <p style="color: #1e1e1e;">Typically 5–10 business days. Larger projects may take up to 14 depending on scope.</p>
+      </div>
+      <div class="feature-card">
+        <h4>Do I need to learn any new tools?</h4>
+        <p style="color: #1e1e1e;">Nope. We integrate your existing stack or set up user-friendly dashboards and training videos.</p>
+      </div>
+      <div class="feature-card">
+        <h4>Is everything really custom?</h4>
+        <p style="color: #1e1e1e;">Yes. Every automation is designed around your offer, process, and platform. No templates.</p>
+      </div>
+      <div class="feature-card">
+        <h4>Do you offer support after launch?</h4>
+        <p style="color: #1e1e1e;">Every plan includes post-launch support. You can also choose our optimization add-on.</p>
+      </div>
+      <div class="feature-card">
+        <h4>Can you build white-label for my agency?</h4>
+        <p style="color: #1e1e1e;">Absolutely. We build under your brand — great for agencies and freelancers scaling fast.</p>
+      </div>
+      <div class="feature-card">
+        <h4>How do I know it’s working?</h4>
+        <p style="color: #1e1e1e;">All builds come with visual flow maps, a client dashboard, and KPI tracking where applicable.</p>
+      </div>
+      <div class="feature-card">
+        <h4>Is there a satisfaction guarantee?</h4>
+        <p style="color: #1e1e1e;">Yes! If you’re not satisfied with the system we build, we offer a full refund within 30 days of delivery.</p>
+      </div>
     </div>
-    <div class="feature-card">
-      <h4>Do I need to learn any new tools?</h4>
-      <p>Nope. We integrate your existing stack or set up user-friendly dashboards and training videos.</p>
-    </div>
-    <div class="feature-card">
-      <h4>Is everything really custom?</h4>
-      <p>Yes. Every automation is designed around your offer, process, and platform. No templates.</p>
-    </div>
-    <div class="feature-card">
-      <h4>Do you offer support after launch?</h4>
-      <p>Every plan includes post-launch support. You can also choose our optimization add-on.</p>
-    </div>
-    <div class="feature-card">
-      <h4>Can you build white-label for my agency?</h4>
-      <p>Absolutely. We build under your brand — great for agencies and freelancers scaling fast.</p>
-    </div>
-    <div class="feature-card">
-      <h4>How do I know it’s working?</h4>
-      <p>All builds come with visual flow maps, a client dashboard, and KPI tracking where applicable.</p>
-    </div>
-    <div class="feature-card">
-      <h4>Is there a satisfaction guarantee?</h4>
-      <p>Yes! If you’re not satisfied with the system we build, we offer a full refund within 30 days of delivery.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
 
 <!-- Contact Section -->
-<section class="section" id="contact">
-  <h2 class="section-title">Book Your Free Strategy Call</h2>
-  <p class="section-subtitle">Let’s uncover how AI can streamline your business and boost profits. No pressure. Just strategy.</p>
-  <div style="max-width: 800px; margin: 40px auto; background: #f7f9ff; border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);">
-    <div style="text-align: center; margin-bottom: 20px;">
-      <h3 class="contact-heading" style="font-size: 1.4rem; margin-bottom: 10px;">✅ Talk With an Automation Expert</h3>
-      <p style="font-size: 1rem; color: #555;">We’ll map out your bottlenecks, goals, and ideal automations in a 100% free, no-commitment Zoom call.</p>
+  <section class="section" id="contact">
+    <h2 class="section-title">Book Your Free Strategy Call</h2>
+    <p class="section-subtitle" style="color: #1e1e1e;">Let’s uncover how AI can streamline your business and boost profits. No pressure. Just strategy.</p>
+    <div style="max-width: 800px; margin: 40px auto; background: #f7f9ff; border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);">
+      <div style="text-align: center; margin-bottom: 20px;">
+        <h3 class="contact-heading" style="font-size: 1.4rem; margin-bottom: 10px;">✅ Talk With an Automation Expert</h3>
+        <p style="font-size: 1rem; color: #1e1e1e;">We’ll map out your bottlenecks, goals, and ideal automations in a 100% free, no-commitment Zoom call.</p>
+      </div>
+      <div style="overflow:hidden; min-width:320px; height:950px;">
+        <iframe src="https://calendly.com/shop-yazful/30min" width="100%" height="100%" frameborder="0" scrolling="no" style="border:none; max-width:100%; overflow:hidden;"></iframe>
+      </div>
     </div>
-    <div style="overflow:hidden; min-width:320px; height:950px;">
-      <iframe src="https://calendly.com/shop-yazful/30min" width="100%" height="100%" frameborder="0" scrolling="no" style="border:none; max-width:100%; overflow:hidden;"></iframe>
-    </div>
-  </div>
-  <p style="font-size: 0.9rem; color: #666; text-align: center; margin-top: 20px;">Your privacy is important. We never share your information. By booking, you agree to be contacted about this service.</p>
-</section>
+    <p style="font-size: 0.9rem; color: #1e1e1e; text-align: center; margin-top: 20px;">Your privacy is important. We never share your information. By booking, you agree to be contacted about this service.</p>
+  </section>
 
 <!-- Final CTA -->
-<section class="cta" style="text-align: center; background: #0070f3; color: white;">
-  <h2 style="font-size: 2rem; margin-bottom: 20px;">Let’s Build Your Automated Growth Machine</h2>
-  <p style="max-width: 700px; margin: 0 auto 30px;">We’re ready when you are. Stop doing what software can do for you. Start scaling like you mean it.</p>
-  <a href="#contact" style="background: white; color: #0070f3; padding: 14px 28px; font-weight: bold; border-radius: 8px; display: inline-block;">Book My Free Strategy Call Now</a>
-</section>
+  <section class="cta" style="text-align: center; background: #0070f3; color: white;">
+    <h2 style="font-size: 2rem; margin-bottom: 20px;">Let’s Build Your Automated Growth Machine</h2>
+    <p style="max-width: 700px; margin: 0 auto 30px; color: #1e1e1e;">We’re ready when you are. Stop doing what software can do for you. Start scaling like you mean it.</p>
+    <a href="#contact" style="background: white; color: #0070f3; padding: 14px 28px; font-weight: bold; border-radius: 8px; display: inline-block;">Book My Free Strategy Call Now</a>
+  </section>
 
 <!-- Footer -->
 <footer style="background: #111; color: #999; text-align: center; padding: 40px 20px;">
-  <p>&copy; 2025 Yazful Automation Agency. All rights reserved.</p>
+  <p style="color: #ffffff;">&copy; 2025 Yazful Automation Agency. All rights reserved.</p>
   <div class="footer-links" style="margin-top: 20px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#solutions">Solutions</a>
-    <a href="#plans">Plans</a>
-    <a href="#compare">Compare</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms of Service</a>
+    <a href="#about" style="color: #ffffff;">About</a>
+    <a href="#services" style="color: #ffffff;">Services</a>
+    <a href="#solutions" style="color: #ffffff;">Solutions</a>
+    <a href="#plans" style="color: #ffffff;">Plans</a>
+    <a href="#compare" style="color: #ffffff;">Compare</a>
+    <a href="#faq" style="color: #ffffff;">FAQ</a>
+    <a href="#contact" style="color: #ffffff;">Contact</a>
+    <a href="#" style="color: #ffffff;">Privacy Policy</a>
+    <a href="#" style="color: #ffffff;">Terms of Service</a>
     <!-- Social Media Links with Icons -->
-    <a href="https://www.linkedin.com/company/yazful" target="_blank" rel="noopener noreferrer" title="LinkedIn" style="display: flex; align-items: center; gap: 6px;">
-      <i class="fab fa-linkedin" aria-hidden="true"></i><span style="font-size: 0.98em;">LinkedIn</span>
-    </a>
-    <a href="https://instagram.com/yazful" target="_blank" rel="noopener noreferrer" title="Instagram" style="display: flex; align-items: center; gap: 6px;">
-      <i class="fab fa-instagram" aria-hidden="true"></i><span style="font-size: 0.98em;">Instagram</span>
-    </a>
-    <a href="https://youtube.com/@yazful" target="_blank" rel="noopener noreferrer" title="YouTube" style="display: flex; align-items: center; gap: 6px;">
-      <i class="fab fa-youtube" aria-hidden="true"></i><span style="font-size: 0.98em;">YouTube</span>
-    </a>
+   
   </div>
 </footer>
 
