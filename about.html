@@ -24,7 +24,7 @@
       font-size: 16px;
       background-color: #fff;
       color: #1e1e1e;
-      line-height: 1.7; 
+      line-height: 1.7;
     }
     a {
       text-decoration: none;
@@ -446,6 +446,41 @@
     body p {
       color: #1e1e1e;
     }
+    .back-to-top {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      background: #0070f3;
+      color: white;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      font-size: 20px;
+      display: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .back-to-top:hover {
+      background: #0056c7;
+      transform: translateY(-3px);
+    }
+
+    .back-to-top i {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
   </style>
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/petervurgy/assets/main/yazful-favicon.png" />
@@ -566,6 +601,19 @@
 
 
 </body>
+  <a href="#" class="back-to-top" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+  <script>
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTop.style.display = 'flex';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+  </script>
 </html>
 
 <!-- Final CTA -->
