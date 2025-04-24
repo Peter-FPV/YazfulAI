@@ -196,7 +196,7 @@
       gap: 40px;
     }
     .feature-card {
-      background-color: white;
+      background-color: #f4f7ff;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
@@ -442,50 +442,9 @@
   .hamburger span {
     transition: transform 0.3s, opacity 0.3s;
   }
-    /* DARK MODE BASE */
-    .dark body {
-      background-color: #2a2a2a;
-      color: #f5f5f5;
-    }
-    .dark nav,
-    .dark footer,
-    .dark .quote {
-      background-color: #1e1e1e;
-      color: #f5f5f5;
-    }
-    .dark .feature-card,
-    .dark .why-box,
-    .dark .testimonial-swiper .swiper-slide {
-      background-color: #383838;
-      color: #f5f5f5;
-    }
-    .dark nav ul li a {
-      color: #ddd;
-    }
-    .dark nav ul li a::after {
-      background: #66aaff;
-    }
-    .dark .hero {
-      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-                  url('https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=1400') center/cover no-repeat;
-    }
-    .dark .hero p {
-      color: #ccc;
-    }
-    .dark .section-subtitle {
-      color: #bbb;
-    }
-    .dark .sticky-cta {
-      background: #66aaff;
-      color: #000;
-    }
-    .dark .cta {
-      background: #1a1a1a;
-      color: #fff;
-    }
-    .dark .cta a {
-      background: #fff;
-      color: #0070f3;
+    /* Enhance paragraph text visibility for both light and dark themes */
+    body p {
+      color: #1e1e1e;
     }
   </style>
   <!-- Favicon -->
@@ -521,11 +480,6 @@
   }
   </script>
 </head>
-<script>
-  // Detect user's system preference and store in localStorage
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (prefersDark) document.documentElement.classList.add('dark');
-</script>
 <body>
 <nav>
   <div class="logo">
@@ -610,9 +564,7 @@
   </div>
 </section>
 
-<footer style="background: #111; color: #999; text-align: center; padding: 40px 20px;">
-  <p>&copy; 2025 Yazful Automation Agency. All rights reserved.</p>
-</footer>
+
 </body>
 </html>
 
@@ -625,32 +577,11 @@
 
 <!-- Footer -->
 <footer style="background: #111; color: #999; text-align: center; padding: 40px 20px;">
-  <p>&copy; 2025 Yazful Automation Agency. All rights reserved.</p>
-  <div class="footer-links" style="margin-top: 20px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#solutions">Solutions</a>
-    <a href="#plans">Plans</a>
-    <a href="#compare">Compare</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
+  <p style="color: #999;">&copy; 2025 Yazful Automation Agency. All rights reserved.</p>
+  <div class="footer-links" style="margin-top: 20px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; color: white;">
     <a href="#">Privacy Policy</a>
     <a href="#">Terms of Service</a>
-    <!-- Social Media Links with Icons -->
-    <a href="https://www.linkedin.com/company/yazful" target="_blank" rel="noopener noreferrer" title="LinkedIn" style="display: flex; align-items: center; gap: 6px;">
-      <i class="fab fa-linkedin" aria-hidden="true"></i><span style="font-size: 0.98em;">LinkedIn</span>
-    </a>
-    <a href="https://instagram.com/yazful" target="_blank" rel="noopener noreferrer" title="Instagram" style="display: flex; align-items: center; gap: 6px;">
-      <i class="fab fa-instagram" aria-hidden="true"></i><span style="font-size: 0.98em;">Instagram</span>
-    </a>
-    <a href="https://youtube.com/@yazful" target="_blank" rel="noopener noreferrer" title="YouTube" style="display: flex; align-items: center; gap: 6px;">
-      <i class="fab fa-youtube" aria-hidden="true"></i><span style="font-size: 0.98em;">YouTube</span>
-    </a>
   </div>
 </footer>
 
 <!-- PHASE 3 END -->
-
-    .dark .logo span {
-      color: #ffffff !important;
-    }
